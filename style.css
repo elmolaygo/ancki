@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    background:#040f1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+}
+
+.modal {
+    z-index: 1000;
+    position: fixed;
+    top: -100%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    border-radius: 20px;
+    background: rgb(147, 170, 221);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    padding: 20px 20px;
+}
+
+.active {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.modal .closeContainer {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+}
+
+.modal-content {
+    margin-top: 35px;
+}
+
+.modal-content h2 {
+    font-family: "Inter", sans-serif;
+}
+
+.modal-content p {
+    font-family: "Manrope", sans-serif;
+    font-size: 25px;
+    color: #333;
+    margin: 10px 0;
+    line-height: 1.2;
+}
+
+.modal i {
+    position: fixed;
+    font-size: 25px;
+    margin: 0;
+}
+
+.socmedbox {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: flex;
+    height: 50px;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.socmedbox ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.socmedbox ul a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.socmedbox ul a div {
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.socmed
+
+.container {
+    display: flex;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.profile {
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #5f61df, #5692e0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    animation: rgb 1s infinite alternate;
+    box-shadow: 0 0 15px 2px rgba(255, 98, 98, 0.5);
+}
+
+@keyframes rgb {
+    0% {
+        box-shadow: 0 0 15px rgba(255, 98, 98, 0.5);
+    }
+    20% {
+        box-shadow: 0 0 15px rgba(169, 255, 98, 0.5);
+    }
+    40% {
+        box-shadow: 0 0 15px rgba(98, 255, 255, 0.5);
+    }
+    60% {
+        box-shadow: 0 0 15px rgba(98, 98, 255, 0.5);
+    }
+    80% {
+        box-shadow: 0 0 15px rgba(255, 98, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(255, 98, 98, 0.5);
+    }
+}
+
+.profile > p {
+    font-size: 28px;
+    font-family: "Manrope", sans-serif;
+    color: white;
+    margin: 0 0 20px 0;
+}
+
+.profile > p .bigger {
+    font-weight: 800;
+}
+
+.profile > p .longer {
+    font-weight: 200;
+    font-size: 40px;
+}
+
+.btn {
+    font-family: "Inter", sans-serif;
+    padding: 10px 20px;
+    background: #1e0920;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #432461;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .profile {
+        width: 250px;
+        height: 250px;
+        margin: 20px 0;
+    }
+
+    .profile > p {
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
