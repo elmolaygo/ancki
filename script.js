@@ -27,3 +27,5 @@ document.addEventListener('DOMContentLoaded', function() {
         marcModal.classList.remove('active');
     })
 });
+
+console.log("Don't judge my code please :>")

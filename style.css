@@ -10,9 +10,25 @@
 body {
     background:#040f1a;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh; 
+}
+
+.topbar {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+}
+
+.topbar .text {
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    color: #fff;
 }
 
 /* Unique Styles */
