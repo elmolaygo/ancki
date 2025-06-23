@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+@import url('fonts/Torus/style.css');
 
 * {
     margin: 0;
@@ -12,6 +13,28 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh; 
+}
+
+/* Unique Styles */
+
+#alphiModal, .alphi {
+    background: linear-gradient(0deg, #137a7f, #86cecb 40%) !important;
+    border: solid 3px #e12885;
+}
+
+#marckModal, .marck {
+    background: linear-gradient(0deg, #198ceb, #24d1ef 50%) !important;
+    border: solid 3px #adadad;
+}
+
+#marcModal, .marc {
+    background: linear-gradient(0deg, #5f61df, #6491cc);
+    border: solid 3px #9cbae7;
+    color: #fff;
+}
+
+#marcModal p {
+    color: #fff;
 }
 
 .modal {
@@ -34,6 +57,14 @@ body {
     left: 50%;
     opacity: 1;
     transition: opacity 0.2s ease-in-out;
+}
+#closeButtonA, #closeButtonB, #closeButtonC {
+    transition: .3s linear;
+    color: #fff;
+}
+
+#closeButtonA:hover, #closeButtonB:hover, #closeButtonC:hover {
+    color: #f15757;
 }
 
 .modal .closeContainer {
@@ -67,17 +98,44 @@ body {
     margin: 0;
 }
 
+.modal-content ul {
+    font-family: "Torus", sans-serif;
+}
+
+.modal-content ul a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #2f6876;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.modal-content ul a:hover {
+    color: #137a7f;
+}
+
 .socmedbox {
     position: absolute;
     align-items: center;
     justify-content: center;
     left: 50%;
-    bottom: 0;
+    bottom: 50px;
     transform: translateX(-50%);
     display: flex;
+    flex-direction: column;
     height: 50px;
     width: 80%;
     border-radius: 5px;
+}
+
+.socmedbox p {
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.link {
+    text-decoration: none;
+    color: #ffbad9;
 }
 
 .socmedbox ul {
@@ -94,14 +152,16 @@ body {
     transition: color 0.3s ease;
 }
 
+.socmedbox ul a:hover {
+    color: #f15757;
+}
+
 .socmedbox ul a div {
     height: 50px;
     width: 50px;
     text-align: center;
     cursor: pointer;
 }
-
-.socmed
 
 .container {
     display: flex;
@@ -119,7 +179,6 @@ body {
     width: 300px;
     height: 300px;
     border-radius: 50px;
-    background: linear-gradient(45deg, #5f61df, #5692e0);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -174,12 +233,20 @@ body {
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.3s linear;
+}
+
+.btn i {
+    transition: all 300ms linear;
 }
 
 .btn:hover {
     background: #432461;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.btn:hover i {
+    margin: 0 0 0 10px;
 }
 
 @media (max-width: 768px) {
@@ -200,5 +267,64 @@ body {
     .btn {
         padding: 8px 16px;
         font-size: 14px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .profile {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile > p {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .modal {
+        width: 90%;
+        height: 70%;
+    }
+}
+
+@media (max-width: 500px) {
+    .profile {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .profile > p {
+        font-size: 20px;
+    }
+
+    .modal-content > p {
+        font-size: 16px;
+    }
+
+    .profile > p .longer {
+        font-weight: 200;
+        font-size: 30px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .modal {
+        width: 90%;
+        height: 90%;
+    }
+    .modal-content ul a {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+    .socmedbox p {
+        font-weight: 600;
+        font-size: 12px;
     }
 }

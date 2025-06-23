@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Torus';
+    src: local('Torus Notched Regular'), local('Torus-Notched-Regular'),
+        url('TorusNotched-Regular.woff2') format('woff2'),
+        url('TorusNotched-Regular.woff') format('woff'),
+        url('TorusNotched-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
