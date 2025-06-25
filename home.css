@@ -1,0 +1,12 @@
+p.text {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+footer {
+    position: fixed;
+    font-family: sans-serif;
+    bottom: 0;
+    left: 0;
+    color: #040f1a;
+}
